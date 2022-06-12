@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">  
     <link href="https://fonts.googleapis.com/css?family=Manrope&display=swap" rel="stylesheet">    
-    <title>Добро (не для чурок и турков)</title>
+    <title>Добро</title>
     <style>
 .btn {
     width: 600px;

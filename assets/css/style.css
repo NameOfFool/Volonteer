@@ -27,7 +27,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    width:75%;
     background-size: cover;
 }
 
@@ -110,9 +110,9 @@ body {
 
 .btn {
     display: inline-block;
+    background-color: #49B9DC;
     vertical-align: top;
     padding: 14px 45px;
-    background-color: #49B9DC;
     font-size: 18px;
     font-weight: bold;
     color: white;
@@ -129,6 +129,7 @@ body {
     display: inline-block;
     vertical-align: top;
     padding: 14px 45px;
+    border-color:#EA6161;
     background-color: #EA6161;
     font-size: 18px;
     font-weight: bold;
@@ -148,12 +149,12 @@ body {
     background-color: #76c9e3;
 }
 .btnnn {
-    margin-left: 50px;
     display: inline-block;
     vertical-align: top;
     padding: 14px 45px;
     background-color: #fff;
     font-size: 18px;
+    border-color:#49B9DC;
     font-weight: bold;
     color: #49B9DC;
     text-decoration: none;
@@ -161,6 +162,7 @@ body {
 }
 .btnnn:hover {
     background-color: #F4F4F4;
+    border-color: #76c9e3;
 }
 .btn {
     width: 400px;
@@ -285,4 +287,21 @@ footer{
 .link:hover{
     text-decoration: underline;
     color: aliceblue;
+}
+.register
+{
+    display: flex;
+    flex-flow: nowrap row;
+}
+.register div{
+    display: flex;
+    flex-flow: column wrap;
+    border:3px solid;
+    height: 100%;
+    min-height: 350px;
+}
+.register a{
+    text-decoration: none;
+    flex:1;
+    height: 100%;
 }

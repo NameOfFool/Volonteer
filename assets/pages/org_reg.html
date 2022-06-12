@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style_kar.css">
+    <link href="https://fonts.googleapis.com/css?family=Manrope&display=swap" rel="stylesheet">  
+    <title>Добро (не для чурок и турков)</title>
+</head>
+<body>
+    <header class="header container">
+        <div class="menu">тут меню</div>
+        <nav class="header__nav">
+            <a class="header__nav__link" href="index.php">О нас</a>
+            <a class="header__nav__link" href="contact.php">Войти</a>
+            <a class="header__nav__link" href="avt.html">Зарегистрироваться</a>
+        </nav>
+    </header>
+    <section class="section-top container">
+        <div class="section-top__description">
+            <div class="section-top__description__left"></div>
+                <h1 class="section-top__description__h1">Стать организатором / Создать организацию</h1>
+                <h2 class="section-top__description__h2">Организация - коллектив волонтёров, выполняющий различные масштабные задачи. Для того, чтобы создать организацию и стать организатором, Вам необходимо заполнить форму ниже:</h2>
+            </div>
+        </div>
+        <div class="section-top__from">
+            <input class="section-top__from__input" id="org_name" type="text" placeholder="Название организации">
+            <input class="section-top__from__input" id="name" type="text" placeholder="Имя">
+            <input class="section-top__from__input" id="surname" type="text" placeholder="Фамилия">
+            <input class="section-top__from__input" id="patronymic" type="text" placeholder="Отчество">
+            <input class="section-top__from__input" id="DOB" type="date" placeholder="Дата рождения">   <!--DOB - date of birth-->
+            <input class="section-top__from__input" id="locality" type="text" placeholder="Населённый пункт (например Москва)">
+            <input class="section-top__from__input" id="phone" type="text" placeholder="Номер телефона">
+            <input class="section-top__from__input" id="email" type="text" placeholder="Электронная почта">
+            <div class="section-top__from__checkbox">
+                <p class="section-top__form__checkbox__p">Укажите дни, в которые вы сможете участвовать в помощи:</p>
+                <div class="section-top__form__checkbox__div">
+                    <label class="section-top__form__checkbox__label">
+                        <input class="section-top__form__checkbox__input" id="day" type="checkbox">
+                        ПН
+                    </label>
+                    <label class="section-top__form__checkbox__label">
+                        <input class="section-top__form__checkbox__input" id="day" type="checkbox">
+                        ВТ
+                    </label>
+                    <label class="section-top__form__checkbox__label">
+                        <input class="section-top__form__checkbox__input" id="day" type="checkbox">
+                        СР
+                    </label>
+                    <label class="section-top__form__checkbox__label">
+                        <input class="section-top__form__checkbox__input" id="day" type="checkbox">
+                        ЧТ
+                    </label>
+                    <label class="section-top__form__checkbox__label">
+                        <input class="section-top__form__checkbox__input" id="day" type="checkbox">
+                        ПТ
+                    </label>
+                    <label class="section-top__form__checkbox__label">
+                        <input class="section-top__form__checkbox__input" id="day" type="checkbox">
+                        СБ
+                    </label>
+                    <label class="section-top__form__checkbox__label">
+                        <input class="section-top__form__checkbox__input" id="day" type="checkbox">
+                        ВС
+                    </label>
+                </div>
+            </div>
+            <input class="section-top__from__input" id="pass" type="text" placeholder="Придумайте пароль">
+            <input class="section-top__from__input" id="pass_again" type="text" placeholder="Введите пароль повторно">
+            <button class="section-top__from__button">Стать волонтёром</button>
+        </div>
+    </section>
+</body>
+</html>

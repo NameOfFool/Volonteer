@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style_kar.css">
+    <link href="https://fonts.googleapis.com/css?family=Manrope&display=swap" rel="stylesheet">  
+    <title>Добро (не для чурок и турков)</title>
+</head>
+<body>
+    <header class="header container">
+        <div class="menu">тут меню</div>
+        <nav class="header__nav">
+            <a class="header__nav__link" href="index.php">О нас</a>
+            <a class="header__nav__link" href="contact.php">Войти</a>
+            <a class="header__nav__link" href="avt.html">Зарегистрироваться</a>
+        </nav>
+    </header>
+    <section class="section-top container">
+        <div class="section-top__description">
+            <div class="section-top__description__left">
+                <h1 class="section-top__description__h1">Получить помощь</h1>
+                <h2 class="section-top__description__h2">Для того, чтобы получить помошь, Вам достаточно заполнить простую форму ниже:</h2>
+            </div>
+        </div>
+        <div class="section-top__form">
+            <input class="section-top__form__input" id="help_name" type="text" placeholder="Имя">
+            <input class="section-top__form__input" id="surname" type="text" placeholder="Фамилия">
+            <input class="section-top__form__input" id="patronymic" type="text" placeholder="Отчество">
+            <input class="section-top__form__input" id="DOB" type="date" placeholder="Дата рождения">   <!--DOB - date of birth-->
+            <input class="section-top__form__input" id="locality" type="text" placeholder="Адрес проживания">
+            <input class="section-top__form__input" id="phone" type="text" placeholder="Номер телефона">
+            <!--<input class="section-top__form__input" id="description" type="submit" placeholder="Опишите нынешнею ситуацию в которой вам нужна помощь">-->
+            <textarea class="section-top__form__textarea" id="description" placeholder="Опишите нынешнею ситуацию в которой вам нужна помощь"></textarea>
+            <p class="section-top__form__p">Являетесь ли Вы объектом социальной защиты? 
+                Если являетесь, то выберите из списка объект к которому Вы относитесь: </p>
+            <select class="section-top__form__select" name="social_privil" id="social_privil">
+                <option class="section-top__form__select__option">Я не являюсь объектом социальной защиты</option>
+                <option class="section-top__form__select__option">Я являюсь объектом социальной защиты</option>
+            </select>
+            <button class="section-top__form__button">Получить помощь</button>
+        </div>
+    </section>
+</body>
+</html>

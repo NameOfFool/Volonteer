@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style_kar.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Manrope&display=swap" rel="stylesheet">  
     <title>Добро</title>
 </head>
 <body>
-    <header class="header container">
-        <div class="menu">тут меню</div>
-        <nav class="header__nav">
-            <a class="header__nav__link" href="index.php">О нас</a>
-            <a class="header__nav__link" href="contact.php">Войти</a>
-            <a class="header__nav__link" href="avt.html">Зарегистрироваться</a>
-        </nav>
-    </header>
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__logo">
+            </div>
+
+            <nav class="nav">
+                <a class="nav__link" href="index.html">Главная</a>
+                <a class="nav__link" href="auth.html">Войти</a>
+                <a class="nav__link" href="reg.html">Регистрация</a>
+                <a class="nav__link" href="exit.html">Выйти</a>
+            </nav>
+        </div>
+    </div>
+</header>
     <section class="section-top container">
         <div class="section-top__description">
             <div class="section-top__description__left">
@@ -25,46 +32,52 @@
             </div>
             <div class="section-top__description__right">
                 <img class="section-top__description__right_img" src="img/1.png">
-                <div class="section-top__description__right_div"></div>
             </div>
         </div>
         <div class="section-top__form">
-            <input class="section-top__form__input" id="vol_name" type="text" placeholder="Имя">
+            <label for="surname" class="section-top__form__label">Фамилия</label>
             <input class="section-top__form__input" id="surname" type="text" placeholder="Фамилия">
+            <label for="name" class="section-top__form__label">Имя</label>
+            <input class="section-top__form__input" id="name" type="text" placeholder="Имя">
+            <label for="patronymic" class="section-top__form__label">Отчество</label>
             <input class="section-top__form__input" id="patronymic" type="text" placeholder="Отчество">
+            <label for="DOB" class="section-top__form__label">Дата рождения</label>
             <input class="section-top__form__input" id="DOB" type="date" placeholder="Дата рождения">   <!--DOB - date of birth-->
+            <label for="locality" class="section-top__form__label">Адрес проживания</label>
             <input class="section-top__form__input" id="locality" type="text" placeholder="Адрес места проживания">
+            <label for="phone" class="section-top__form__label">Телефон</label>
             <input class="section-top__form__input" id="phone" type="text" placeholder="Номер телефона">
+            <label for="email" class="section-top__form__label">Почта</label>
             <input class="section-top__form__input" id="email" type="text" placeholder="Электронная почта">
             <div class="section-top__form__checkbox">
                 <p class="section-top__form__checkbox__p">Укажите дни, в которые вы сможете участвовать в помощи:</p>
                 <div class="section-top__form__checkbox__div">
                     <label class="section-top__form__checkbox__label">
-                        <input class="section-top__form__checkbox__input" id="day" type="checkbox">
+                        <input class="section-top__form__checkbox__input" name="Mon" type="checkbox">
                         ПН
                     </label>
                     <label class="section-top__form__checkbox__label">
-                        <input class="section-top__form__checkbox__input" id="day" type="checkbox">
+                        <input class="section-top__form__checkbox__input" name="Tue" type="checkbox">
                         ВТ
                     </label>
                     <label class="section-top__form__checkbox__label">
-                        <input class="section-top__form__checkbox__input" id="day" type="checkbox">
+                        <input class="section-top__form__checkbox__input" name="Wed" type="checkbox">
                         СР
                     </label>
                     <label class="section-top__form__checkbox__label">
-                        <input class="section-top__form__checkbox__input" id="day" type="checkbox">
+                        <input class="section-top__form__checkbox__input" name="Thu" type="checkbox">
                         ЧТ
                     </label>
                     <label class="section-top__form__checkbox__label">
-                        <input class="section-top__form__checkbox__input" id="day" type="checkbox">
+                        <input class="section-top__form__checkbox__input" name="Fri" type="checkbox">
                         ПТ
                     </label>
                     <label class="section-top__form__checkbox__label">
-                        <input class="section-top__form__checkbox__input" id="day" type="checkbox">
+                        <input class="section-top__form__checkbox__input" name="Sat" type="checkbox">
                         СБ
                     </label>
                     <label class="section-top__form__checkbox__label">
-                        <input class="section-top__form__checkbox__input" id="day" type="checkbox">
+                        <input class="section-top__form__checkbox__input" name="Sun" type="checkbox">
                         ВС
                     </label>
                 </div>
@@ -74,5 +87,39 @@
             <button class="section-top__form__button">Стать волонтёром</button>
         </div>
     </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo-block">
+                <img class="footer-logo" src="" alt="">
+            </div>
+            <div class="footer-links">
+                <span class="links-title">Действия:</span>
+                <a href="" class="link">Войти</a>
+                <a href="" class="link">Зарегистрироваться</a>
+            </div>
+            <div class="footer-links">
+                <span class="links-title">Ссылки:</span>
+                <a href="" class="link">Стать волонтёром</a>
+                <a href="" class="link">Сать организатором</a>
+                <a href="" class="link">Получить помощь</a>
+                <a href="" class="link">Поиск</a>
+                <a href="" class="link">Мероприятия</a>
+                <a href="" class="link">О нас</a>
+            </div>
+            <div class="footer-links">
+                <span class="links-title">Контакты:</span>
+                <a href="" class="link">+7 900 400-23-23</a>
+                <a href="" class="link">+7 900 400-31-31</a>
+                <div class="contacts-social-media">
+                    <a href=""><img src="/assets/image/templates-img/vk.svg" alt=""></a>
+                    <a href=""><img src="/assets/image/templates-img/ok.svg" alt=""></a>
+                    <a href=""><img src="/assets/image/templates-img/mail.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-rights">
+            <span>Название компании 2022. Все права защищены</span>
+        </div>
+    </footer>
 </body>
 </html>

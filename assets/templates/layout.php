@@ -55,9 +55,9 @@
             <a href="" class="link">+7 900 400-23-23</a>
             <a href="" class="link">+7 900 400-31-31</a>
             <div class="contacts-social-media">
-                <a href=""><img src="../assets/image/templates-img/vk.svg" alt=""></a>
-                <a href=""><img src="../assets/image/templates-img/ok.svg" alt=""></a>
-                <a href=""><img src="../assets/image/templates-img/mail.svg" alt=""></a>
+                <a href=""><img src="/assets/image/templates-img/vk.svg" alt=""></a>
+                <a href=""><img src="/assets/image/templates-img/ok.svg" alt=""></a>
+                <a href=""><img src="/assets/image/templates-img/mail.svg" alt=""></a>
             </div>
         </div>
     </div>

@@ -1,16 +1,14 @@
 <div class="intro">
     <div class="container">
         <div class="intro__inner">
-            <div class="btn">
-            <form action="#" method="post">
-            <div id="wrapper">
+            <form class="section-top__form" method="post">
                 <p style="font-size: 35px;">Вход</p>
-    <input name="login" id="login" placeholder="Логин" type="text">
-    <input name="pass" id="pass" placeholder="Пароль" type="password">
-  </div>
-  <button type="submit">Войти</button>
+                <label for="login" class="section-top__form__label">Почта</label>
+                <input name="login" class="section-top__form__input" id="login" placeholder="Почта" type="text">
+                <label for="pass" class="section-top__form__label">Пароль</label>
+                <input name="pass" class="section-top__form__input" id="pass" placeholder="Пароль" type="password">
+                <button class="section-top__form__button" type="submit">Войти</button>
             </form>
-        </div>
         </div>
     </div>
 </div>

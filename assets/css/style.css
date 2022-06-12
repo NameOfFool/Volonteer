@@ -340,6 +340,7 @@ footer{
     display: flex;
     flex-direction: column;
     background-color: #87C1D9;
+    padding: 50px;
     border-radius: 28px;
     width: 1007px;
     margin: 150px auto;
@@ -383,9 +384,6 @@ footer{
 }
 #DOB{
     width: 236px;
-}
-#locality{
-    width: 536px;
 }
 #description{
     width: 894px;

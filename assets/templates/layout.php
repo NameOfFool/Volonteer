@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <script src="/assets/js/jquery.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Manrope&display=swap" rel="stylesheet">
     <title>Добро</title>
 </head>
@@ -24,7 +25,8 @@
                     <a class="nav__link" href="auth.php">Войти</a>
                     <a class="nav__link" href="reg.php">Регистрация</a>
                 <?php else:?>
-                    <a class="nav__link" href="exit.php">Выйти</a>
+                    <a class="nav__link" href="cab.php"><?=$_COOKIE['user']?></a>
+                    <a class="nav__link" href="/exit.php">Выйти</a>
                 <?php endif;?>
             </nav>
         </div>

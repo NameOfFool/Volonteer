@@ -6,7 +6,7 @@
                 <h2 class="section-top__description__h2">Волонтер — это человек, который помогает даром незащищенным слоям населения, которые нуждабтся в помощи. Для того, чтобы стать волонтёром, Вам необходимо заполнить форму ниже:</h2>
             </div>
             <div class="section-top__description__right">
-                <img class="section-top__description__right_img" src="/assets/image/Vols.png" alt="image">
+                <img class="section-top__description__right_img" src="/assets/image/Vols.svg" alt="image">
             </div>
         </div>
         <form class="section-top__form" method="post">
@@ -66,18 +66,3 @@
             <input type="submit" class="section-top__form__button" value="Стать волонтёром">
         </form>
     </section>
-<script>
-    $(document).ready(function(){
-        $("#locality").keydown(kd)
-    })
-    function kd()
-    {
-        let a = getAddress($("#locality").val()).then(response=> {
-            $("#loc").empty()
-            for(let i of response["suggestions"])
-                $("#loc").append("<option value='"+ i.value +"'>")
-            $('#loc').show().focus();
-        })
-
-    }
-</script>

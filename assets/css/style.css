@@ -28,6 +28,7 @@ body {
     flex-direction: column;
     justify-content: center;
     width:75%;
+    height:100vh;
     background-size: cover;
 }
 
@@ -38,6 +39,7 @@ body {
 .intro__inner p {
 	font-size: 35pt;
     font-weight: bold;
+    margin:0;
 	color: #000;
 }
 
@@ -191,7 +193,6 @@ input[type=text] {
     border-radius: 8px;
     width:75%;
     font-size: 27px;
-    margin-bottom: 10px;
     opacity: 1;
     text-indent: 20px;
     transition: all .2s ease-in-out;
@@ -202,7 +203,6 @@ input[type=password] {
     border-radius: 8px;
     font-size: 27px;
     width: 75%;
-    margin-bottom: 10px;
     opacity: 1;
     text-indent: 20px;
     transition: all .2s ease-in-out;
@@ -293,6 +293,7 @@ footer{
 {
     display: flex;
     flex-flow: nowrap row;
+    gap:50px;
 }
 .register div{
     display: flex;
@@ -338,19 +339,21 @@ footer{
 }
 .section-top__form{
     display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    gap:50px;
     flex-direction: column;
     background-color: #87C1D9;
-    padding: 50px;
+    padding: 50px 0;
     border-radius: 28px;
-    width: 1007px;
+    width: 72.5%;
     margin: 150px auto;
     box-shadow: 0 -10px #78B6C3;
-    align-items: center;
+    align-items: flex-start;
 }
 .section-top__form__input{
     width: 520px;
     height: 72px;
-    margin-top: 50px;
     border: 0;
     border-radius: 17px;
     font-size: 28px;
@@ -358,10 +361,11 @@ footer{
 }
 .section-top__form * {
     width:75%;
+    margin-left: 50px;
 }
 .section-top__form__label
 {
-    text-align: center;
+    text-align: left;
     color: white;
     font-size: 28px;
     font-weight: 700;
@@ -388,7 +392,6 @@ footer{
 #description{
     width: 894px;
     height: 339px;
-    margin: 50px;
     border: 0;
     border-radius: 17px;
     font-size: 28px;
@@ -415,7 +418,6 @@ footer{
     font-size: 28px;
     font-weight: 300;
     color: #808080;
-    margin: 50px;
 }
 .section-top__form__button{
     width: 402px;
@@ -432,26 +434,31 @@ footer{
     display: flex;
     flex-direction: column;
     padding: 0 0 0 50px;
+    margin: 0;
 }
 .section-top__form__checkbox__p{
     color: white;
     font-size: 28px;
     font-weight: 700;
+    margin: 0;
 }
-.section-top__form__checkbox__div{
+.section-top__form__checkbox__div {
     display: flex;
     justify-content: space-between;
-    width:100%;
+    width: 100%;
+    margin: 0;
 }
 .section-top__form__checkbox__label{
     color: white;
     font-size: 28px;
     font-weight: 700;
     align-items: center;
+    margin: 0;
 }
 .section-top__form__checkbox__input{
     border: 0;
     border-radius: 4px;
     width: 33px;
     height: 33px;
+    margin: 0;
 }

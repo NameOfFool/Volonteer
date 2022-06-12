@@ -21,3 +21,16 @@ async function getAddress(query) {
     let arr = JSON.parse(address);
     return arr;
 }
+$(document).ready(function(){
+    $("#locality").keydown(kd)
+})
+function kd()
+{
+    let a = getAddress($("#locality").val()).then(response=> {
+        $("#loc").empty()
+        for(let i of response["suggestions"])
+            $("#loc").append("<option value='"+ i.value +"'>")
+        $('#loc').show().focus();
+    })
+
+}

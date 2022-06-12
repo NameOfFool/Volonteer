@@ -1,3 +1,4 @@
+<script src="/assets/js/address.js"></script>
     <section class="section-top container">
         <div class="section-top__description">
             <div class="section-top__description__left">
@@ -9,27 +10,27 @@
 
             </div>
         </div>
-        <div class="section-top__form">
+        <form method="post" class="section-top__form">
             <label for="org_name" class="section-top__form__label">Название организации</label>
-            <input class="section-top__form__input" id="org_name" type="text" placeholder="Название организации">
+            <input class="section-top__form__input" id="org_name" name="org_name" type="text" placeholder="Название организации">
             <label for="surname" class="section-top__form__label">Фамилия</label>
-            <input class="section-top__form__input" id="surname" type="text" placeholder="Фамилия">
+            <input class="section-top__form__input" id="surname" name="surname" type="text" placeholder="Фамилия">
             <label for="name" class="section-top__form__label">Имя</label>
-            <input class="section-top__form__input" id="name" type="text" placeholder="Имя">
+            <input class="section-top__form__input" id="name" name="name" type="text" placeholder="Имя">
             <label for="patronymic" class="section-top__form__label">Отчетсво</label>
-            <input class="section-top__form__input" id="patronymic" type="text" placeholder="Отчество">
-            <label for="DOB" class="section-top__form__label">Дата рождения</label>
-            <input class="section-top__form__input" id="DOB" type="date" placeholder="Дата рождения">   <!--DOB - date of birth-->
+            <input class="section-top__form__input" id="patronymic" name="patronymic" type="text" placeholder="Отчество">
             <label for="locality" class="section-top__form__label">Населённый пункт</label>
-            <input class="section-top__form__input" id="locality" type="text" placeholder="Населённый пункт (например Москва)">
+            <input class="section-top__form__input" list="loc" id="locality" name=locality type="text" placeholder="Адрес места проживания">
+            <datalist id="loc" class="section-top__form__input">
+            </datalist>
             <label for="phone" class="section-top__form__label">Телефон</label>
-            <input class="section-top__form__input" id="phone" type="text" placeholder="Номер телефона">
+            <input class="section-top__form__input" id="phone" name="phone" type="text" placeholder="Номер телефона">
             <label for="email" class="section-top__form__label">Почта</label>
-            <input class="section-top__form__input" id="email" type="text" placeholder="Электронная почта">
+            <input class="section-top__form__input" id="email" name="email" type="text" placeholder="Электронная почта">
             <label for="pass" class="section-top__form__label">Пароль</label>
-            <input class="section-top__form__input" id="pass" type="text" placeholder="Придумайте пароль">
+            <input class="section-top__form__input" id="pass" name="pass" type="password" placeholder="Придумайте пароль">
             <label for="pass_again" class="section-top__form__label">Повторите пароль</label>
-            <input class="section-top__form__input" id="pass_again" type="text" placeholder="Введите пароль повторно">
-            <button class="section-top__form__button">Стать организатором</button>
-        </div>
+            <input class="section-top__form__input" id="pass_again" name="pass_again" type="password" placeholder="Введите пароль повторно">
+            <input type="submit" class="section-top__form__button" value="Добавить организацию">
+        </form>
     </section>

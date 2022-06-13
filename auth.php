@@ -12,7 +12,7 @@ if($_SERVER['REQUEST_METHOD']=="POST")
         {
             $Sec_name = $user['Sec_Name'];
             $Name = $user['Name'];
-            setcookie("user", "$Sec_name $Name");
+            setcookie("user", "$Email");
             header("location:index.php");
         }
 }

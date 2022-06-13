@@ -6,18 +6,41 @@
     <script src="https://api-maps.yandex.ru/2.1/?apikey=89a6f7b4-8b1c-4e17-ac84-8fad2db5cb27&lang=ru_RU" type="text/javascript">
     </script>
     <script type="text/javascript">
+        let address1 = "г Москва, ул Кантемировская, д 4 к 3";
+        let arr = ["г Москва, ул Подольских Курскантов, д 16 к 2","г Рязань"]
+        let myMap
+        let multyRoute = []
         ymaps.ready(init);
         function init(){
-            var myMap = new ymaps.Map("map", {
+            myMap = new ymaps.Map("map", {
                 center: [55.76, 37.64],
-                zoom: 7
+                zoom: 9
             });
+            for(let end of arr) {
+                multyRoute.push(new ymaps.multiRouter.MultiRoute({
+                    referencePoints: [address1, end],
+                    params: {
+                        results: 1,
+                        boundsAutoApply: true
+                    }
+                }))
+            }
+            for(let m of multyRoute)
+                myMap.geoObjects.add(m)
+        }
+        function wait()
+        {
+            for(let m of multyRoute) {
+                let length = m.getActiveRoute().properties.get('distance').value
+                length = Math.round(length)
+                console.log(length)
+            }
         }
     </script>
 </head>
-
 <body>
 <div id="map" style="width: 600px; height: 400px"></div>
+<button onclick="wait()">!!!</button>
 </body>
 
 </html>

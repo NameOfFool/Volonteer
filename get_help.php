@@ -29,7 +29,7 @@ values
     ('$DOB','$Phone',(select ID_User from user where email='$Email'),'$Address','$Desc',(select ID_Type from socail_protection where Soc_Prot_Type='$Soc'));";
         $conn->query($query);
         print_r($query);
-        setcookie("user","$Sec_name $Name");
+        setcookie("user", "$Email");
         header("location:index.php");
     }
 }

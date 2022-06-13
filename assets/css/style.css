@@ -39,7 +39,6 @@ body {
 .intro__inner p {
 	font-size: 35pt;
     font-weight: bold;
-    margin:0;
 	color: #000;
 }
 
@@ -180,10 +179,6 @@ body {
 #wrapper { overflow: hidden; }
 form {
 
-}
-input[type=radio]
-{
-    display: none;
 }
 input[type=radio]:checked + label { opacity: 1; }
 
@@ -333,6 +328,14 @@ footer{
     font-weight: 800;
     font-size: 40px;
 }
+.section-top__form__h1{
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    width: 860px;
+    height: 112px;
+    margin: 0;
+}
 .section-top__description__h2{
     font-weight: 300;
     font-size: 27px;
@@ -358,6 +361,9 @@ footer{
     border-radius: 17px;
     font-size: 28px;
     font-weight: 300;
+}
+.section-top__form__label__file{
+    display: none;
 }
 .section-top__form * {
     width:75%;
@@ -448,6 +454,10 @@ footer{
     width: 100%;
     margin: 0;
 }
+.section-top__form__div1{
+    width: 1000px;
+    display: flex;
+}
 .section-top__form__checkbox__label{
     color: white;
     font-size: 28px;
@@ -461,4 +471,31 @@ footer{
     width: 33px;
     height: 33px;
     margin: 0;
+}
+.section-top__form__p{
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    width: 860px;
+    height: 112px;
+    padding: 0 0 0 50px;
+    margin: 0;
+}
+.section-top__form__p1{
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    width: 860px;
+    padding: 0 0 0 50px;
+    margin: 0;
+}
+.section-top__form__select{
+    width: 860px;
+    height: 72px;
+    border: 0;
+    border-radius: 17px;
+    font-size: 28px;
+    font-weight: 300;
+    color: #808080;
+    margin: 50px;
 }

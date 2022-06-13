@@ -23,7 +23,7 @@ if($_SERVER['REQUEST_METHOD']=="POST")
      Organization_Name) values ('$Address','$Email',(select ID_User from user where email='$Email'),'$Org');";
         $conn->query($query);
         print_r($query);
-        setcookie("user","$Sec_name $Name");
+        setcookie("user", "$Email");
         header("location:index.php");
     }
 }

@@ -20,12 +20,12 @@
             <nav class="nav">
                 <a class="nav__link" href="index.php">Главная</a>
                 <?php
-                if(!isset($_COOKIE['user'])):
+                if(!isset($user)):
                     ?>
                     <a class="nav__link" href="auth.php">Войти</a>
                     <a class="nav__link" href="reg.php">Регистрация</a>
                 <?php else:?>
-                    <a class="nav__link" href="cab.php"><?=$_COOKIE['user']?></a>
+                    <a class="nav__link" href="<?=$cab??"!!!" ?>"><?=$user?></a>
                     <a class="nav__link" href="/exit.php">Выйти</a>
                 <?php endif;?>
             </nav>

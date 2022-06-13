@@ -22,7 +22,7 @@ if($_SERVER['REQUEST_METHOD']=="POST")
      ID_User,
      Address) values ('$DOB','$Phone',(select ID_User from user where email='$Email'),'$Address');";
         $conn->query($query);
-        setcookie("user","$Sec_name $Name");
+        setcookie("user", "$Email");
         header("location:index.php");
     }
 }

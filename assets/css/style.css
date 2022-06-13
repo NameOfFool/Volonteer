@@ -180,6 +180,15 @@ body {
 form {
 
 }
+
+.image img
+{
+    border-radius: 250px;
+    object-fit: cover;
+    width:500px;
+    height:500px;
+    margin: 0 auto;
+}
 input[type=radio]:checked + label { opacity: 1; }
 
 input[type=text] {
@@ -388,6 +397,13 @@ footer{
 }
 #vol_name{
     margin-top: 80px;
+}
+.image
+{
+    width:75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 #help_name{
     margin-top: 80px;

@@ -1,9 +1,10 @@
+<script src="/assets/js/address.js"></script>
 <section class="section-top container">
-    <form class="section-top__form" method="post">
-        <div class="section-top__form__div"></div>
+    <form class="section-top__form" method="post" enctype="multipart/form-data">
+        <div class="section-top__form__div image"> <img src= " <?=isset($avatar)&&$avatar!==""?$avatar:"avatars/empty.png" ?> "  alt="!!!"></div>
         <label class="section-top__form__label">                <!--Новый класс section-top__form__label-->
             Загрузить файл
-            <input type="file" id="img" name="img" class="section-top__form__label__file">   <!--Новый класс section-top__form__label__file-->
+            <input type="file" id="img" name="image" class="section-top__form__label__file">   <!--Новый класс section-top__form__label__file-->
         </label>
         <h1 class="section-top__form__h1">Основная информация:</h1>         <!--Новый класс section-top__form__h1-->
         <p class="section-top__form__p1">Имя: </p>
@@ -17,7 +18,9 @@
         <p class="section-top__form__p1">Дата рождения: </p>
         <input class="section-top__form__input" id="DOB" name="DOB" value="<?=$Birth_Date??""?>" type="date" placeholder="Дата рождения">   <!--DOB - date of birth-->
         <p class="section-top__form__p1">Адрес проживания: </p>
-        <input class="section-top__form__input" id="locality" value="<?=$Address??""?>" name="locality" type="text" placeholder="Москва">
+        <input class="section-top__form__input" list="loc" id="locality" value="<?=$Address??""?>"  name=locality type="text" placeholder="Москва">
+        <datalist id="loc" class="section-top__form__input">
+        </datalist>
         <p class="section-top__form__p1">Номер телефона: </p>
         <input class="section-top__form__input" id="phone" value="<?=$Phone??""?>" name="phone" type="text" placeholder="+7 915 374 49-57">
         <p class="section-top__form__p1">Электронная почта: </p>

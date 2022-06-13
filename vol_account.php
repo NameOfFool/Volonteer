@@ -2,7 +2,6 @@
 require_once "functions.php";
 $conn = conn();
 if($_SERVER['REQUEST_METHOD']=='POST') {
-    print_r($_POST);
     $query = "SELECT ID_Volonteer FROM user
     left join volonteer v on user.ID_User = v.ID_User
     where Email='".$_COOKIE['user']."'";
@@ -17,6 +16,19 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
     $Book = isset($_POST['book'])?1:0;
     $Driver = isset($_POST['driver'])?1:0;
     $Birth_Date = $_POST["DOB"];
+    if($_FILES['image']['name']!=="") {
+        $file = $_FILES['image']['tmp_name'];
+        $to = "avatars/{$_FILES['image']['name']}";
+        $mime = mime_content_type($file);
+        if ($mime != 'image/jpeg' && $mime != 'image/png') {
+            $errors['image'] = 'Выберите файл формата .png,.jpg,.jpeg';
+            $e = 1;
+        } else {
+            move_uploaded_file($_FILES['image']['tmp_name'], $to);
+        }
+    }
+    else
+        $to=null;
     $Address = $_POST["locality"];
     $Employment = $_POST['employment']==0?"NULL":$_POST['employment'];
     $Phone = $_POST["phone"];
@@ -31,7 +43,7 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
     $TIN = $_POST["tin"];
     $TG = $_POST["link_telegram"];
     $VK = $_POST["link_vk"];
-    $query = "Update user set Sec_Name='$Sec_Name',Name='$Name',Patronymic='$Patronymic',Email='$Email' where Email='$Email'";
+    $query = "Update user set Sec_Name='$Sec_Name', Avatar='$to',Name='$Name',Patronymic='$Patronymic',Email='$Email' where Email='$Email'";
     $conn->query($query);
     $query = "UPDATE `volonteer` SET
                        `Sex`='$Sex',
@@ -78,10 +90,8 @@ values(null, '$Series','$Number','dfse','985-920','2016-02-02','Москва','$
         $conn->query($query);
     }
 }
-$query = "SELECT * FROM user
-    left join volonteer v on user.ID_User = v.ID_User
-    left join volonteer_direction vd on v.ID_Volonteer = vd.ID_Volonteer
-    left join direction d on vd.ID_Direction = d.ID_Direction
+$query = "SELECT * FROM volonteer v
+    left join user u on v.ID_User = u.ID_User
     left join passport p on p.ID_Passport = v.ID_Passport
     where Email='".$_COOKIE['user']."'";
 $result = $conn->query($query);
@@ -124,6 +134,7 @@ $main = include_template("vol_account.php",
     [
         "ID"=>$rows[0]["ID_Volonteer"]??"",
         "Sec_Name"=>$rows[0]["Sec_Name"]??"",
+        "avatar"=>$rows[0]["Avatar"]??"/avatars/empty.png",
         "Name"=>$rows[0]["Name"]??"",
         "Sex"=>$rows[0]["Sex"]??"",
         "Patronymic"=>$rows[0]["Patronymic"]??"",

@@ -6,9 +6,6 @@
                 <h2 class="section-top__description__h2">Организация - коллектив волонтёров, выполняющий различные масштабные задачи.
                     Для того, чтобы создать организацию и стать организатором, Вам необходимо заполнить форму ниже:</h2>
             </div>
-            <div class="section-top__description__right">
-
-            </div>
         </div>
         <form method="post" class="section-top__form">
             <label for="org_name" class="section-top__form__label">Название организации</label>

@@ -26,39 +26,7 @@
             <input class="section-top__form__input" id="phone" name="phone" type="text" placeholder="Номер телефона">
             <label for="email" class="section-top__form__label">Почта</label>
             <input class="section-top__form__input" id="email" name="email" type="text" placeholder="Электронная почта">
-            <div class="section-top__form__checkbox">
-                <p class="section-top__form__checkbox__p">Укажите дни, в которые вы сможете участвовать в помощи:</p>
-                <div class="section-top__form__checkbox__div">
-                    <label class="section-top__form__checkbox__label">
-                        <input class="section-top__form__checkbox__input" name="Mon" type="checkbox">
-                        ПН
-                    </label>
-                    <label class="section-top__form__checkbox__label">
-                        <input class="section-top__form__checkbox__input" name="Tue" type="checkbox">
-                        ВТ
-                    </label>
-                    <label class="section-top__form__checkbox__label">
-                        <input class="section-top__form__checkbox__input" name="Wed" type="checkbox">
-                        СР
-                    </label>
-                    <label class="section-top__form__checkbox__label">
-                        <input class="section-top__form__checkbox__input" name="Thu" type="checkbox">
-                        ЧТ
-                    </label>
-                    <label class="section-top__form__checkbox__label">
-                        <input class="section-top__form__checkbox__input" name="Fri" type="checkbox">
-                        ПТ
-                    </label>
-                    <label class="section-top__form__checkbox__label">
-                        <input class="section-top__form__checkbox__input" name="Sat" type="checkbox">
-                        СБ
-                    </label>
-                    <label class="section-top__form__checkbox__label">
-                        <input class="section-top__form__checkbox__input" name="Sun" type="checkbox">
-                        ВС
-                    </label>
-                </div>
-            </div>
+
             <label for="pass" class="section-top__form__label">Пароль</label>
             <input class="section-top__form__input" id="pass" name="pass" type="password" placeholder="Придумайте пароль">
             <label for="pass_again" class="section-top__form__label">Повторите пароль</label>

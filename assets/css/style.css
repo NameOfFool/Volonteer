@@ -61,9 +61,11 @@ body {
     font-size: 20pt;
     font-weight: 700;
     color: white;
-	margin-top:-20px;
+	margin:20px;
 }
-
+.regimg{
+    width:10vw;
+}
 .nav {
     font-size: 14px;
 	margin-top: 20px;

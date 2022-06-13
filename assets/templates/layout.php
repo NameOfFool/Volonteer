@@ -15,6 +15,7 @@
     <div class="container">
         <div class="header__inner">
             <div class="header__logo">
+                <img class="footer-logo" src="/assets/image/logo.svg" alt="">
             </div>
 
             <nav class="nav">
@@ -36,7 +37,7 @@
 <footer>
     <div class="footer-content">
         <div class="footer-logo-block">
-            <img class="footer-logo" src="" alt="">
+            <img class="footer-logo" src="/assets/image/logo.svg" style="width: 125px" alt="">
         </div>
         <div class="footer-links">
             <span class="links-title">Действия:</span>

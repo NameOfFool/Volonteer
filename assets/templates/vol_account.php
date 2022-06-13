@@ -21,6 +21,22 @@
         <input class="section-top__form__input" list="loc" id="locality" value="<?=$Address??""?>"  name=locality type="text" placeholder="Москва">
         <datalist id="loc" class="section-top__form__input">
         </datalist>
+        <div class="section-top__form__checkbox">
+            <p class="section-top__form__checkbox__p">Укажите дни, в которые вы сможете участвовать в помощи:</p>
+            <div class="section-top__form__checkbox__div">
+                <?php foreach($days as $day)
+                {
+                    ?>
+                    <label class="section-top__form__checkbox__label">
+                        <input class="section-top__form__checkbox__input" name="<?=$day['ID_Day']."_".$ID?>" type="checkbox"
+                            <?=in_array([0 =>$day['ID_Day'],$ID],$sel_week)?"checked":"!!!"?>>
+                        <?=$day['Day'] ?>
+                    </label>
+                    <?php
+                }
+                ?>
+            </div>
+        </div>
         <p class="section-top__form__p1">Номер телефона: </p>
         <input class="section-top__form__input" id="phone" value="<?=$Phone??""?>" name="phone" type="text" placeholder="+7 915 374 49-57">
         <p class="section-top__form__p1">Электронная почта: </p>

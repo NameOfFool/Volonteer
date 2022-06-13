@@ -89,6 +89,21 @@ values(null, '$Series','$Number','dfse','985-920','2016-02-02','Москва','$
         }
         $conn->query($query);
     }
+    $query = "Select * from week";
+    $result = $conn->query($query);
+    while($row = $result->fetch_array(MYSQLI_ASSOC))
+    {
+        if(isset($_POST[$row['ID_Day']."_".$ID]))
+        {
+            $query = "insert into volonteer_week (ID_Volonteer, ID_Day) values ($ID,".$row['ID_Day'].")";
+            print_r($query);
+        }
+        else
+        {
+            $query = "delete from volonteer_week where ID_Volonteer=$ID and ID_day=".$row['ID_Day'];
+        }
+        $conn->query($query);
+    }
 }
 $query = "SELECT * FROM volonteer v
     left join user u on v.ID_User = u.ID_User
@@ -108,6 +123,12 @@ $directions = $result->fetch_all(MYSQLI_ASSOC);
 $query = "SELECT * from volonteer_direction where ID_Volonteer=".$rows[0]["ID_Volonteer"];
 $result = $conn->query($query);
 $sel_dir = $result->fetch_all();
+$query = "SELECT * from week";
+$result = $conn->query($query);
+$days = $result->fetch_all(MYSQLI_ASSOC);
+$query = "SELECT * from volonteer_week where ID_Volonteer=".$rows[0]["ID_Volonteer"];
+$result = $conn->query($query);
+$sel_week = $result->fetch_all();
 $ID_Size=$rows[0]["ID_Size"];
 $x=['ID_Size' => 0, 'Size' => "Не выбрано"];
 foreach ($sizes as $i=>$size)
@@ -137,6 +158,7 @@ $main = include_template("vol_account.php",
         "avatar"=>$rows[0]["Avatar"]??"/avatars/empty.png",
         "Name"=>$rows[0]["Name"]??"",
         "Sex"=>$rows[0]["Sex"]??"",
+        "days"=>$days,
         "Patronymic"=>$rows[0]["Patronymic"]??"",
         "About"=>$rows[0]["About"]??"",
         "Book"=>$rows[0]['Medicat_book']??"",
@@ -154,7 +176,8 @@ $main = include_template("vol_account.php",
         "Sizes"=>$sizes??"",
         "employments"=>$employments,
         "directions"=>$directions,
-        "sel_dir"=>$sel_dir
+        "sel_dir"=>$sel_dir,
+        "sel_week"=>$sel_week
     ]
 );
 $page = include_template("layout.php", ['main' => $main]);
